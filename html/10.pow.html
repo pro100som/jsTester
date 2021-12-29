@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>SOm test system. pow</title>
+		<link rel="shortcut icon" href="../img/favicon.jpg" type="image/x-icon">
+		<link rel="stylesheet" href="../css/style.css">
+		<script src="../lib/LoDash.js"></script>
+		<script src="../lib/jquery-2.2.2.js"></script>
+		<script src="../spec/6.pow.spec"></script>
+		<script src="../js/main.js"></script>
+	</head>
+	<body>
+		<a href = "../index.html" class="linkHome">Вернуться к выбору задачи</a>
+		<a href = "instruction.html" class="linkHome">Инструкция</a>
+		<div class="wrapper">
+			<div class="input">
+				<h2 class="input__header">
+					Задание 6. Функция pow(a, n, k).
+				</h2>
+				<p class="input__task">
+					Написать функцию, вычисляющую остаток от деления <i>a</i> в степени <i>n</i> на <i>k</i>. ( <i>(a^n)%k</i> )
+				</p>
+				<p class="input__data">
+					Передаваемые параметры: три натуральных числа <i>a</i>, <i>n</i> и <i>k</i>.
+					При этом <i>a</i> и <i>k</i> не первосходят <i>10^7</i>,
+					а <i>n</i> не превосходит <i>10^14</i>.
+					В случае, если <i>k</i> не передано, считать, что <i>k=10^7</i>.
+					Передаваемые данные соответствуют условию, проверять их не нужно!
+				</p>
+				<ul class="input__data">
+					Возвращаемое значение:
+						<li class="input__data">
+							остаток от деления <i>a</i> в степени <i>n</i> на <i>k</i>
+						</li>
+				</ul>
+				<p class="input__funcH">unit.pow = function(a, n, k){</p>
+				<textarea type="text" class="input__inp" placeholder="insert your code here"></textarea>
+				<p class="input__funcB">};</p>
+				<input type="button" class="input__check" value="Проверить результат">
+			</div>
+			<script type="text/template" id="template">
+				<table class="result__table">
+					<tr class="result__header">
+						<th class="result__headN">Номер</th>
+						<th class="result__headDescr">Описание</th>
+						<th class="result__headT">Время</th>
+						<th class="result__headRes">Результат</th>
+					</tr>
+					<% for (let i=0; i<spec.length; i++){ %>
+						<tr class="result__item">
+							<td class="result__testN">
+								<%-i+1%>
+							</td>
+							<td class="result__testDescr">
+								<%-spec[i].description%>
+							</td>
+							<td class="result__testT">
+								<%-spec[i].time%>
+							</td>
+							<td class="result__testRes <%if(spec[i].result=='OK'){%>
+								<%-"result__testRes--OK"%><%};%>">
+								<%-spec[i].result%>
+							</td>
+						</tr>
+					<% }; %>
+				</table>
+			</script>
+			<div class="result"></div>
+		</div>
+	</body>
+</html>

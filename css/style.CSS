@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: whitesmoke;
+  font-family: tahoma; }
+
+.template {
+  display: none; }
+
+.SOmTest {
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  min-width: 600px;
+  box-shadow: 0 0 20px black;
+  background: white; }
+  .SOmTest .input i {
+    color: red; }
+  .SOmTest .input .input__header {
+    margin: 30px;
+    text-align: center; }
+  .SOmTest .input .input__task {
+    font-size: 110%; }
+  .SOmTest .input .input__restrict {
+    font-size: 80%; }
+    .SOmTest .input .input__restrict .input__restrOp {
+      display: inline-block;
+      margin: auto 5px;
+      color: red; }
+  .SOmTest .input .input__data {
+    margin-left: 20px; }
+    .SOmTest .input .input__data li {
+      margin-left: 40px; }
+  .SOmTest .input .input__funcH {
+    margin-top: 30px;
+    font-family: cerif; }
+  .SOmTest .input .input__inp {
+    width: 90%;
+    display: block;
+    margin: auto;
+    height: 300px; }
+  .SOmTest .input .input__funcB {
+    margin-bottom: 30px;
+    font-family: cerif; }
+  .SOmTest .result .result__table {
+    text-align: center;
+    border: solid 3px black;
+    width: 100%;
+    margin-top: 30px; }
+    .SOmTest .result .result__table * {
+      border: solid 1px gray; }
+    .SOmTest .result .result__table .result__item .result__testRes {
+      background: red; }
+    .SOmTest .result .result__table .result__item .result__testRes--OK {
+      background: green; }
